@@ -32,10 +32,24 @@ def run_os_checks(dev: Path) -> tuple[list[str], list[str]]:
     for rel in required:
         (oks if (dev / rel).is_file() else fails).append(f"四台文件 {rel}")
 
-    # 2. 目录
+    # 2. 目录骨架（文件夹结构,固定·不可改名）
     for rel in ["tasks/active", "tasks/done", "tasks/_templates",
-                "research/active", "research/ideas", "research/findings"]:
+                "research/ideas", "research/active", "research/findings", "research/archive",
+                "exec", "scripts"]:
         (oks if (dev / rel).is_dir() else fails).append(f"目录 {rel}/")
+
+    # 2b. OS 结构文件（固定名,改名/删 → FAIL；变动的任务卡/研究文件名不在内）
+    os_files = [
+        "research/TRACE.md",
+        "scripts/validate_project.py", "scripts/build_ledger.py", "scripts/README.md",
+        "tasks/_templates/TASK.md",
+        "research/ideas/README.md", "research/ideas/_TEMPLATE.md",
+        "research/active/README.md", "research/active/_TEMPLATE.md",
+        "research/findings/_TEMPLATE.md",
+    ]
+    for rel in os_files:
+        (oks if (dev / rel).is_file() else fails).append(f"OS 结构文件 {rel}")
+    (oks if (dev.parent / "CLAUDE.md").is_file() else fails).append("OS 结构文件 CLAUDE.md(根)")
 
     # 3. BOARD ✅done ↔ done/<id>/
     board = (dev / "tasks/BOARD.md").read_text(encoding="utf-8") if (dev / "tasks/BOARD.md").is_file() else ""
