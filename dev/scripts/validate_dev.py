@@ -54,7 +54,7 @@ for rel in ["tasks/active", "tasks/done", "tasks/_templates",
             "research/active", "research/ideas", "research/findings"]:
     (ok if (DEV / rel).is_dir() else fail)(f"目录 {rel}/")
 
-# --- 3 + 4. BOARD ✅done ↔ done/<id>/ -------------------------------------
+# --- 3 + 4. BOARD(活跃版) + active/done 一致 ----------------------------
 board = (DEV / "tasks/BOARD.md").read_text(encoding="utf-8") if (DEV / "tasks/BOARD.md").is_file() else ""
 done_in_board: set[str] = set()
 for line in board.splitlines():
@@ -74,6 +74,14 @@ for tid in sorted(done_in_board):
 for tid in sorted(done_dirs):
     if not (DEV / "tasks/done" / tid / "TASK.md").is_file():
         fail(f"done/{tid}/ 缺 TASK.md")
+
+# active/<id>/ 应在 BOARD(活跃版)有行 —— 孤儿任务检查
+board_ids = set(re.findall(r"\bT-\d{3,4}\b", board))
+for tid in sorted({p.name for p in (DEV / "tasks/active").glob("T-*") if p.is_dir()}):
+    if tid in board_ids:
+        ok(f"BOARD 含活跃任务 {tid}")
+    else:
+        fail(f"active/{tid}/ 不在 BOARD 活跃版（孤儿任务,主力板漏了）")
 
 # --- 5. 活跃文档无迁移前旧路径悬空引用 ------------------------------------
 LIVE_DOCS = [

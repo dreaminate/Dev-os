@@ -2,7 +2,8 @@
      脚手架非枷锁:[必填]不能省;[按需]用得上才留,用不上就删;能力小就精简,别为填而填。 -->
 # T-XXXX · <标题>
 
-- **状态**:pending_review · **review_status**:0
+- **状态**:todo | in_progress | done   ·   **review_status**:0 未确认 | 1 已确认
+<!-- 「等用户确认」= 状态 done + review_status 0;落档由"工作完成"触发,你确认后 review_status→1 -->
 - **来源**:<finding / 决策 / STATE gap>  ·  **优先级**:P?  ·  **依赖**:<其它任务>
 
 ## Scope [必填]
