@@ -32,6 +32,7 @@
 原始研究又长又乐观,**蒸馏**= 打折乐观 + 拍板去伪存真 + 提炼成可落地:
 `research/archive`(原料) → `research/findings`(蒸馏设计) → `DECISIONS.md`(拍板) → `tasks/`(实现)。
 在研/创新走 `ideas/` → `active/<topic>/` → 成熟才进上面这条链。
+蒸馏的 **6 步范式 + finding 模板**见 `research/INDEX.md`(研究台过程)。
 
 ## 核心纪律（全文 RULES.md）
 
