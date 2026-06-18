@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-<!-- OS 自带 · clone 自 dev-os · 慢变路由,勿塞当前进度(进度在 STATE/BOARD)。 -->
+<!-- 【开发os级别】clone 自 dev-os · 慢变路由,勿塞当前进度(进度在 STATE/BOARD)。 -->
 
 ⛔ 别直接改代码 —— 先读 dev/。本仓库由 **dev/ 开发 OS** 驱动,不是普通仓库。
 

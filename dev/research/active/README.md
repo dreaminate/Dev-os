@@ -1,6 +1,6 @@
 # 研究台 · active（在研线程）
 
-<!-- OS 自带 · 源自 dev-os clone · 勿改。具体线程用 _TEMPLATE.md 造。 -->
+<!-- 【开发os级别】勿改 · clone 自 dev-os。具体线程用 _TEMPLATE.md 造。 -->
 
 > 正在深挖的研究主题,**一线程一目录**。镜像 `../../tasks/active`——研究也有「在做」态。
 

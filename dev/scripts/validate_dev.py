@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""dev/ 开发 OS 结构校验器（OS 自带 · 勿改 · 源自 dev-os clone）。
+"""dev/ 开发 OS 结构校验器（【开发os级别】勿改 · clone 自 dev-os）。
 
 只管 **OS 结构**：四台文件齐全 / 目录齐全 / BOARD↔done 一致 / 活跃任务孤儿。
-**项目专属检查在同目录 `validate_project.py`（项目填）**——本脚本会自动连带跑它。
+**项目专属检查在同目录 `validate_project.py`（【项目级别】填）**——本脚本会自动连带跑它。
 
 跑：  python dev/scripts/validate_dev.py
 退出码 0 = 全过；1 = 有 FAIL。CI / pre-commit 可挂这个。
@@ -81,7 +81,7 @@ def run_os_checks(dev: Path) -> tuple[list[str], list[str]]:
 
 oks, fails = run_os_checks(DEV)
 
-# 连带跑项目检查（validate_project.py，项目填；缺了不算错）
+# 连带跑项目检查（validate_project.py，【项目级别】填；缺了不算错）
 try:
     sys.path.insert(0, str(DEV / "scripts"))
     from validate_project import project_checks  # type: ignore

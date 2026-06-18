@@ -1,24 +1,24 @@
 # 开发 OS（dev/）· OS 规约
 
-<!-- OS 自带 · 源自 dev-os clone · 勿改。本文件是 OS 规约/方法,跨项目一致。 -->
+<!-- 【开发os级别】勿改 · clone 自 dev-os。本文件是 OS 规约/方法,跨项目一致。 -->
 
 这里是「**怎么建**」——四台 + Goal Loop。本文件随骨架走,任何用本 OS 的项目都带一份。
 产品本身的手册/运行数据放项目自己的 `docs/` 等处(app 运行时读的留在项目侧)。
 
 ## 四台 + 两本账 + 一道闸
 
-| 件 | 文件/目录 | 职责 | 通用/项目 |
+| 件 | 文件/目录 | 职责 | 级别 |
 |---|---|---|---|
-| 目标台 | `GOAL.md` | 项目**完整最终形态**(终态契约,慢变,所有 gap 对照它) | 项目填 |
-| — | `STATE.md` | **诚实 gap 陈述器**输出:现状 vs GOAL(每 loop 重生;🟡未验证 ≠ ✅) | 项目填 |
-| — | `DECISIONS.md` | 决策账本(**append-only**,锁定后不改既往) | 项目填 |
-| — | `RULES.md` | **OS 通用铁律**(诚实/对抗测试/扩展不替换/防漂/审计纪律) | **OS 自带·勿删** |
-| — | `RULES.project.md` | **本项目铁律**(冻结文件/范围/安全不变量) | 项目填 |
-| — | `ISSUES.md` | **跨任务问题/风险登记册**(未决 Open Q 不掉地) | 项目填 |
-| 任务台 | `tasks/` | `BOARD.md`(活跃板) + `active/<id>/` + `done/<id>/` + `_templates/` | 格式通用·内容项目 |
-| 研究台 | `research/` | `INDEX.md` + `TRACE.md` + `ideas/`(创新入口) + `active/`(在研) + `findings/`(已蒸馏) + `archive/`(归档) | 结构通用·内容项目 |
-| 执行台 | `exec/` | `LOG.md`(滚动记录台) + `HANDOFF.md`(新 session 入口) | 方法通用·内容项目 |
-| 闸 | `scripts/` | `validate_dev.py`(OS 结构自检·勿改) + `validate_project.py`(项目锚点/旧路径·填) + `build_ledger.py`(全含量账本) | 核心通用·配置在 validate_project |
+| 目标台 | `GOAL.md` | 项目**完整最终形态**(终态契约,慢变,所有 gap 对照它) | 【项目级别】填 |
+| — | `STATE.md` | **诚实 gap 陈述器**输出:现状 vs GOAL(每 loop 重生;🟡未验证 ≠ ✅) | 【项目级别】填 |
+| — | `DECISIONS.md` | 决策账本(**append-only**,锁定后不改既往) | 【项目级别】填 |
+| — | `RULES.md` | **OS 通用铁律**(诚实/对抗测试/扩展不替换/防漂/审计纪律) | **【开发os级别】** |
+| — | `RULES.project.md` | **本项目铁律**(冻结文件/范围/安全不变量) | 【项目级别】填 |
+| — | `ISSUES.md` | **跨任务问题/风险登记册**(未决 Open Q 不掉地) | 【项目级别】填 |
+| 任务台 | `tasks/` | `BOARD.md`(活跃板) + `active/<id>/` + `done/<id>/` + `_templates/` | 结构/模板【开发os级别】· 内容【项目级别】 |
+| 研究台 | `research/` | `INDEX.md` + `TRACE.md` + `ideas/`(创新入口) + `active/`(在研) + `findings/`(已蒸馏) + `archive/`(归档) | 结构/模板【开发os级别】· 内容【项目级别】 |
+| 执行台 | `exec/` | `LOG.md`(滚动记录台) + `HANDOFF.md`(新 session 入口) | 格式【开发os级别】· 内容【项目级别】 |
+| 闸 | `scripts/` | `validate_dev.py`(OS 结构自检) + `validate_project.py`(项目锚点/旧路径) + `build_ledger.py`(全含量账本) | validate_dev/build_ledger【开发os级别】· validate_project【项目级别】 |
 
 ## Goal Loop（开发循环）
 

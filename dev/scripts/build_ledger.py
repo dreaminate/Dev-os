@@ -7,7 +7,7 @@ BOARD.md 是「活跃版」(只 todo/in_progress,完成即删行,永不臃肿);
 跑:  python dev/scripts/build_ledger.py            # 打印到 stdout
      python dev/scripts/build_ledger.py --write    # 另写 dev/tasks/LEDGER.md(标自动生成)
 
-OS 自带 · 源自 dev-os clone · 勿改。
+【开发os级别】勿改 · clone 自 dev-os。
 """
 from __future__ import annotations
 

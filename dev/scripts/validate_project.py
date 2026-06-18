@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""项目专属检查（**项目填**）。`validate_dev.py` 会自动连带跑本文件的 `project_checks`。
+"""项目专属检查（**【项目级别】填**）。`validate_dev.py` 会自动连带跑本文件的 `project_checks`。
 
 适配本项目就改这里：
 - `PROJECT_ANCHORS`：项目关键文件（存在性检查，相对仓库根）。
