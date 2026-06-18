@@ -5,7 +5,7 @@
 
 ## 怎么用(实例化到你的项目)
 
-1. 复制本仓库的 **`dev/` 和 `CLAUDE.md`** 到你的项目根。
+1. 复制本仓库的 **`dev/` 和 `CLAUDE.md`** 到你的项目根(**连空目录占位 `.gitkeep` 一起带**——`tasks/active`、`tasks/done`、`research/archive` 等靠它存在,漏了 `validate_dev` 会 FAIL;**别复制本仓库根的 `README.md`**,它是 OS 安装说明、不是项目文件)。
 2. 填项目内容(模板都带 `<...>` 占位):
    - `dev/GOAL.md` — 项目终态契约
    - `dev/RULES.project.md` — 本项目红线(冻结文件 / 范围 / 安全不变量)
