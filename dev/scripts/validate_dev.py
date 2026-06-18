@@ -5,6 +5,8 @@
 退出码 0 = 全过；1 = 有 FAIL。CI / pre-commit 可挂这个。
 
 通用结构检查 + 项目锚点。**适配本项目只需改下面"项目配置"两个 list。**
+
+OS 自带 · 源自 dev-os clone · 除"项目配置"块外勿改(改了就不是这套 OS 的自检)。
 """
 from __future__ import annotations
 

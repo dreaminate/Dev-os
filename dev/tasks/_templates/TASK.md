@@ -1,3 +1,4 @@
+<!-- OS 自带模板 · 勿改本文件。造新卡:复制到 tasks/active/T-XXXX/TASK.md,删掉本行再填。 -->
 # T-XXXX · <标题>
 
 - **状态**:pending_review
