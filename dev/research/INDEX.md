@@ -12,12 +12,12 @@
 - `findings/` · 已蒸馏的 build-ready 设计(带接线 + 对抗测试要点)
 - `../DECISIONS.md` · 由研究产出并经用户拍板的决策
 
-## 在研 / 创新入口（探索自由区）
+## 在研 / 创新入口
 - `ideas/` · 论文研读笔记 / 原创架构 RFC / 猜想——还没成熟到能录任务的先落这里。
 - `active/<topic>/` · 正在深挖的研究线程(镜像 `../tasks/active`)。
 
 ## 研究生命周期
-`ideas/`(灵感·RFC) → `active/<topic>/`(在研深挖) → `findings/`(可落地设计) → `../tasks/BOARD.md`(T-xxx)。要「下注」(影响产品/治理)才进治理漏斗;探索期自由。
+`ideas/`(灵感·RFC) → `active/<topic>/`(在研深挖) → `findings/`(可落地设计) → `../tasks/BOARD.md`(T-xxx)。**立成任务(开始建+对抗测试)才进 Goal Loop 门**;在研阶段 informal,不要求严格验收。
 
 ## 蒸馏范式（研究 → 任务）
 **6 步(把研究变成可落地任务,AI 照此走;不是死流程,是手艺骨架):**

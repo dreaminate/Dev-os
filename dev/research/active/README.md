@@ -15,7 +15,7 @@ active/<topic-slug>/
 来自 `../ideas/` 的想法 → 这里深挖(读论文、做小实验、画架构) → 蒸馏成 build-ready 设计落 `../findings/` → 录成 `../../tasks/` 任务。
 
 ## 纪律
-- **探索自由**:在研期不要求严格验收。
-- 蒸馏出 finding、要「下注」时才进治理漏斗。
+- **不挡**:在研期 informal,不要求严格验收。
+- 蒸馏出 finding、立成任务时才进 Goal Loop 对抗测试门。
 - 线程蒸馏完 → 把产出落 `../findings/`,本目录可归档或删。
 - 模板见 `_TEMPLATE.md`。
