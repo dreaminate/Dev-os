@@ -27,12 +27,20 @@
    → 完成落档(active→done, BOARD 刷新) → 重跑 gap 陈述器(STATE) → 再循环
 ```
 
-## 蒸馏（研究 → 可落地）
+## 研究 → 任务（方法 · 通用,所有项目一样）
 
-原始研究又长又乐观,**蒸馏**= 打折乐观 + 拍板去伪存真 + 提炼成可落地:
-`research/archive`(原料) → `research/findings`(蒸馏设计) → `DECISIONS.md`(拍板) → `tasks/`(实现)。
-在研/创新走 `ideas/` → `active/<topic>/` → 成熟才进上面这条链。
-蒸馏的 **6 步范式 + finding 模板**见 `research/INDEX.md`(研究台过程)。
+**研究生命周期**:`research/ideas/`(灵感·RFC·论文笔记) → `research/active/<topic>/`(在研深挖) → `research/findings/`(build-ready 设计) → `tasks/BOARD.md`(T-xxx)。**立成任务(开始建 + 对抗测试)才进 Goal Loop**;在研阶段 informal,不要求严格验收。原料归 `research/archive/`,蒸馏成 finding、拍板进 `DECISIONS.md`。
+
+**蒸馏 6 步**(把又长又乐观的研究变成可落地任务,AI 照此走;不是死流程,是手艺骨架):
+1. **先读怀疑面再读结论** — 先看研究自己的对抗核查/反方,把乐观推荐打折。
+2. **抽承重的可证伪主张** — 剥掉 hype,留一句「如果 X 则 Y」+ 适用域 + 证据强度。
+3. **诚实标未验证残余** — 研究没建立的明写出来,绝不带进 finding 当真。
+4. **落成可落地设计** — 接到本项目 `file:line` + 复用现有模块 + 设计对抗测试。落 `research/findings/`(模板 `findings/_TEMPLATE.md`)。
+5. **拆成任务** — 一个 finding 拆成 BOARD 行,每行一个验收一句话 + 优先级 + 依赖。
+6. **溯源回填** — finding↔研究↔任务 写进 `research/TRACE.md`。
+
+> 硬不变量(对抗测试门必抓 / 诚实标未验证)见 `RULES.md` §2/§3——蒸馏**继承**,不在此重复。
+> `research/INDEX.md` 只放**本项目**的研究指针(内容),方法看这里(README)。
 
 ## 核心纪律（全文 RULES.md）
 
