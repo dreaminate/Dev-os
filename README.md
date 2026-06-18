@@ -10,14 +10,14 @@
    - `dev/GOAL.md` — 项目终态契约
    - `dev/RULES.project.md` — 本项目红线(冻结文件 / 范围 / 安全不变量)
    - `dev/exec/HANDOFF.md` — 新 session 入口(填项目名/示例任务)
-3. 改 `dev/scripts/validate_dev.py` 顶部 `PROJECT_ANCHORS`(项目关键文件)+ `STALE_PREFIXES`(可选)。
-4. 跑 `python dev/scripts/validate_dev.py` 自检。
+3. 改 `dev/scripts/validate_project.py` 的 `PROJECT_ANCHORS`(项目关键文件)+ `STALE_PREFIXES`(可选);**别动 `validate_dev.py`**(OS 自带·勿改)。
+4. 跑 `python dev/scripts/validate_dev.py` 自检（会自动连带跑 `validate_project.py`）;`python dev/scripts/build_ledger.py` 看全含量任务表。
 5. 开干:第一个任务录进 `dev/tasks/BOARD.md`,按 Goal Loop 走。
 
 ## 通用 vs 项目(边界)
 
 - **通用(本骨架自带,勿删)**:四台结构 · Goal Loop · `dev/README.md` 方法 · `dev/RULES.md`(OS 铁律,含审计纪律) · 模板 · validator 核心 · 防漂纪律。
-- **项目(你填)**:GOAL/STATE/BOARD/DECISIONS/ISSUES 内容 · `dev/RULES.project.md` · validator 的 `PROJECT_ANCHORS`。
+- **项目(你填)**:GOAL/STATE/BOARD/DECISIONS/ISSUES 内容 · `dev/RULES.project.md` · `dev/scripts/validate_project.py`(锚点/旧路径)。
 
 完整方法与哲学见 [`dev/README.md`](dev/README.md)(随骨架走,每个项目都带一份)。
 

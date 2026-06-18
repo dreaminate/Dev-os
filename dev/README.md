@@ -18,7 +18,7 @@
 | 任务台 | `tasks/` | `BOARD.md`(活跃板) + `active/<id>/` + `done/<id>/` + `_templates/` | 格式通用·内容项目 |
 | 研究台 | `research/` | `INDEX.md` + `TRACE.md` + `ideas/`(创新入口) + `active/`(在研) + `findings/`(已蒸馏) + `archive/`(归档) | 结构通用·内容项目 |
 | 执行台 | `exec/` | `LOG.md`(滚动记录台) + `HANDOFF.md`(新 session 入口) | 方法通用·内容项目 |
-| 闸 | `scripts/validate_dev.py` | 一致性自检(四台齐全 / BOARD↔done / 结构) | 核心通用·锚点配置 |
+| 闸 | `scripts/` | `validate_dev.py`(OS 结构自检·勿改) + `validate_project.py`(项目锚点/旧路径·填) + `build_ledger.py`(全含量账本) | 核心通用·配置在 validate_project |
 
 ## Goal Loop（开发循环）
 
