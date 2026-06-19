@@ -1,6 +1,7 @@
 # LOG · 执行台滚动日志
 
 > 每个 session/Goal Loop 一条,最新在上。只记**做了什么 + 结果 + 下一步**,详情进 `tasks/done/<id>/`。
+> 长了把旧条目挪进 `LOG.archive.md`(归档);**查历史**用 `python dev/scripts/build_log_index.py`(活跃+归档统一索引,active 没查到必查归档)。
 
 <!-- 格式·防跑偏 | 追加型:每个 loop 一条,最新追加到本注释下方第一位。每条照此骨架:
 ## <日期> · <标题>
