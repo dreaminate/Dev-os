@@ -1,0 +1,66 @@
+<svg width="100%" viewBox="0 0 900 560" role="img" xmlns="http://www.w3.org/2000/svg"><title>Dev-os 目录结构</title><desc>单人开发 OS 的 dev 目录:四台 + 两本账 + 一道闸。框架文件勿改(灰),项目填(青)。目标台/铁律登记/任务台/研究台/执行台 + 脚本闸。</desc>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#7a7873" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>
+ text{font-family:-apple-system,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;}
+ .fn{font-size:11.5px;font-weight:600;}.ds{font-size:10.5px;}.tg{font-size:13px;font-weight:600;fill:#33322f;}.lbl{font-size:10.5px;fill:#7a7873;}
+ .box{fill:#fbfaf8;stroke:#d8d6cc;stroke-width:0.6;}
+ .c-teal{fill:#E1F5EE;stroke:#0F6E56;stroke-width:0.5;}.c-teal .fn{fill:#085041;}.c-teal .ds{fill:#0F6E56;}
+ .c-gray{fill:#F1EFE8;stroke:#5F5E5A;stroke-width:0.5;}.c-gray .fn{fill:#444441;}.c-gray .ds{fill:#5F5E5A;}
+ .c-purple{fill:#EEEDFE;stroke:#534AB7;stroke-width:0.5;}.c-purple .fn{fill:#3C3489;}.c-purple .ds{fill:#534AB7;}
+ .c-amber{fill:#FAEEDA;stroke:#854F0B;stroke-width:0.5;}.c-amber .fn{fill:#633806;}.c-amber .ds{fill:#854F0B;}
+</style>
+<rect x="0" y="0" width="900" height="560" fill="#fdfdfb"/>
+<text x="40" y="28" style="font-size:16px;font-weight:600;fill:#2c2c2a">Dev-os 目录结构 = 四台 + 两账 + 一闸</text>
+<text x="40" y="47" style="font-size:11.5px;fill:#5f5e5a">活跃面只 4 个小文件:GOAL(终态) + STATE(现状) + BOARD(下一步) + HANDOFF(入口)。重资料 read-on-demand。颜色按级别分。</text>
+<rect class="c-gray" x="40" y="57" width="12" height="12" rx="2"/><text class="lbl" x="56" y="67">框架·勿改(OS 级)</text>
+<rect class="c-teal" x="190" y="57" width="12" height="12" rx="2"/><text class="lbl" x="206" y="67">项目填</text>
+
+<rect class="box" x="40" y="78" width="410" height="118" rx="8"/>
+<text class="tg" x="50" y="96">❶ 目标台 / 状态</text>
+<g class="c-teal"><rect x="46" y="104" width="398" height="26" rx="4"/><text class="fn" x="54" y="116">GOAL.md</text><text class="ds" x="200" y="121">完整最终形态 · 终态契约 · 慢变</text></g>
+<g class="c-teal"><rect x="46" y="134" width="398" height="26" rx="4"/><text class="fn" x="54" y="146">STATE.md</text><text class="ds" x="200" y="151">诚实 gap 陈述器 · 每 loop 重生 · 🟡≠✅</text></g>
+<g class="c-teal"><rect x="46" y="164" width="398" height="26" rx="4"/><text class="fn" x="54" y="176">DECISIONS.md</text><text class="ds" x="200" y="181">决策账本 · append-only · 锁后不改</text></g>
+
+<rect class="box" x="462" y="78" width="398" height="118" rx="8"/>
+<text class="tg" x="472" y="96">❷ 铁律 + 登记</text>
+<g class="c-gray"><rect x="468" y="104" width="386" height="26" rx="4"/><text class="fn" x="476" y="116">RULES.md</text><text class="ds" x="610" y="121">OS 通用铁律 §0–8 · 框架</text></g>
+<g class="c-teal"><rect x="468" y="134" width="190" height="26" rx="4"/><text class="fn" x="476" y="150">RULES.project.md</text><text class="ds" x="476" y="160" style="font-size:9px">本项目红线</text></g>
+<g class="c-teal"><rect x="664" y="134" width="190" height="26" rx="4"/><text class="fn" x="672" y="150">ISSUES.md</text><text class="ds" x="672" y="160" style="font-size:9px">问题/风险登记</text></g>
+<g class="c-teal"><rect x="468" y="164" width="190" height="26" rx="4"/><text class="fn" x="476" y="180">experience.md</text><text class="ds" x="476" y="190" style="font-size:9px">技术坑库·append</text></g>
+<g class="c-teal"><rect x="664" y="164" width="190" height="26" rx="4"/><text class="fn" x="672" y="180">CODEMAP.md</text><text class="ds" x="672" y="190" style="font-size:9px">代码结构图</text></g>
+
+<rect class="box" x="40" y="204" width="410" height="118" rx="8"/>
+<text class="tg" x="50" y="222">❸ 任务台 tasks/</text>
+<g class="c-teal"><rect x="46" y="230" width="398" height="26" rx="4"/><text class="fn" x="54" y="242">BOARD.md</text><text class="ds" x="200" y="247">活跃板 · ✅done ↔ done/&lt;id&gt; 一一对</text></g>
+<g class="c-teal"><rect x="46" y="260" width="190" height="26" rx="4"/><text class="fn" x="54" y="276">active/&lt;id&gt;/</text><text class="ds" x="54" y="286" style="font-size:9px">在做的卡</text></g>
+<g class="c-teal"><rect x="246" y="260" width="198" height="26" rx="4"/><text class="fn" x="254" y="276">done/&lt;id&gt;/</text><text class="ds" x="254" y="286" style="font-size:9px">落档</text></g>
+<g class="c-gray"><rect x="46" y="290" width="398" height="26" rx="4"/><text class="fn" x="54" y="306">_templates/</text><text class="ds" x="200" y="311">卡/finding 模板 · 结构勿改 · 内容项目填</text></g>
+
+<rect class="box" x="462" y="204" width="398" height="118" rx="8"/>
+<text class="tg" x="472" y="222">❹ 研究台 research/</text>
+<g class="c-gray"><rect x="468" y="230" width="386" height="26" rx="4"/><text class="fn" x="476" y="242">INDEX · TRACE · WORKFLOW</text><text class="ds" x="650" y="247">指针/溯源/研究方法</text></g>
+<g class="c-teal"><rect x="468" y="260" width="120" height="26" rx="4"/><text class="fn" x="476" y="276">ideas/</text><text class="ds" x="476" y="286" style="font-size:9px">灵感·RFC</text></g>
+<line x1="588" y1="273" x2="604" y2="273" stroke="#7a7873" stroke-width="1.3" marker-end="url(#ar)"/>
+<g class="c-teal"><rect x="606" y="260" width="120" height="26" rx="4"/><text class="fn" x="614" y="276">active/</text><text class="ds" x="614" y="286" style="font-size:9px">在研深挖</text></g>
+<line x1="726" y1="273" x2="742" y2="273" stroke="#7a7873" stroke-width="1.3" marker-end="url(#ar)"/>
+<g class="c-teal"><rect x="744" y="260" width="110" height="26" rx="4"/><text class="fn" x="752" y="276">findings/</text><text class="ds" x="752" y="286" style="font-size:9px">build-ready</text></g>
+<text class="lbl" x="476" y="308">findings → tasks/BOARD(T-xxx):立成任务+对抗测试才进 Goal Loop</text>
+
+<rect class="box" x="40" y="330" width="410" height="82" rx="8"/>
+<text class="tg" x="50" y="348">❺ 执行台 exec/</text>
+<g class="c-gray"><rect x="46" y="356" width="190" height="48" rx="4"/><text class="fn" x="54" y="373">LOG.md</text><text class="ds" x="54" y="388">滚动记录台·最新在上</text><text class="ds" x="54" y="400" style="font-size:9px">长则挪 LOG.archive.md</text></g>
+<g class="c-gray"><rect x="246" y="356" width="198" height="48" rx="4"/><text class="fn" x="254" y="373">HANDOFF.md</text><text class="ds" x="254" y="388">新 session 入口提示词</text><text class="ds" x="254" y="400" style="font-size:9px">格式框架·内容项目填</text></g>
+
+<rect class="box" x="462" y="330" width="398" height="82" rx="8"/>
+<text class="tg" x="472" y="348">❻ 闸 scripts/</text>
+<g class="c-gray"><rect x="468" y="356" width="190" height="48" rx="4"/><text class="fn" x="476" y="373">validate_dev.py</text><text class="ds" x="476" y="388">OS 结构自检·唯一阻断闸</text><text class="ds" x="476" y="400" style="font-size:9px">挂 CI/pre-commit 防漂</text></g>
+<g class="c-teal"><rect x="664" y="356" width="190" height="48" rx="4"/><text class="fn" x="672" y="373">validate_project.py</text><text class="ds" x="672" y="388">项目锚点/旧路径·项目填</text><text class="ds" x="672" y="400" style="font-size:9px">build_ledger / build_*</text></g>
+
+<rect class="box" x="40" y="420" width="820" height="120" rx="8"/>
+<text class="tg" x="50" y="438">两本账 + 一道闸 = harness 不靠手工纪律,能自检</text>
+<text class="ds" x="50" y="458" style="fill:#444441">· 两本账:DECISIONS(决策·append-only,锁后不改) + experience/LOG(教训与执行,滚动归档)——慢变 vs 滚动各归各处</text>
+<text class="ds" x="50" y="478" style="fill:#444441">· 防漂铁律:易变的东西(测试数/进度/当前任务)绝不写进慢变文件(GOAL/RULES/CLAUDE),只在 STATE/BOARD</text>
+<text class="ds" x="50" y="498" style="fill:#444441">· 长引用文件(GOAL/RULES/DECISIONS)顶部放导航头:只描述结构与查法,grep 到位必读原文,绝不枚举每条内容</text>
+<text class="ds" x="50" y="518" style="fill:#791F1F">· validate_dev 查:四台文件齐全 · BOARD ✅done ↔ done/&lt;id&gt; 一一对 · 目录齐全 · 项目锚点在 · STATE 不假绿灯</text>
+<text class="ds" x="50" y="536" style="fill:#5f5e5a">· 级别分线:【开发os级别】跨项目一致勿改(灰) — 【项目级别】每个项目自己填(青);clone 自 dev-os 都带一份</text>
+</svg>

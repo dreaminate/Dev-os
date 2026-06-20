@@ -1,0 +1,72 @@
+<svg width="100%" viewBox="0 0 900 600" role="img" xmlns="http://www.w3.org/2000/svg"><title>Dev-os Goal Loop</title><desc>单写者开发循环:诚实查现状(STATE gap) → gap 变任务(BOARD) → 执行写实现+对抗测试 → 测试跑绿不破基线 → 落档 done → 刷 STATE(🟡≠✅) → validate_dev 自检 → 再循环。研究台 ideas→active→findings 蒸馏入任务。</desc>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#7a7873" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<style>
+ text{font-family:-apple-system,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;}
+ .fn{font-size:11.5px;font-weight:600;}.ds{font-size:10px;}.tg{font-size:13px;font-weight:600;fill:#33322f;}.lbl{font-size:10px;fill:#7a7873;}
+ .box{fill:#fbfaf8;stroke:#d8d6cc;stroke-width:0.6;}
+ .c-teal{fill:#E1F5EE;stroke:#0F6E56;stroke-width:0.5;}.c-teal .fn{fill:#085041;}.c-teal .ds{fill:#0F6E56;}
+ .c-gray{fill:#F1EFE8;stroke:#5F5E5A;stroke-width:0.5;}.c-gray .fn{fill:#444441;}.c-gray .ds{fill:#5F5E5A;}
+ .c-purple{fill:#EEEDFE;stroke:#534AB7;stroke-width:0.5;}.c-purple .fn{fill:#3C3489;}.c-purple .ds{fill:#534AB7;}
+ .c-amber{fill:#FAEEDA;stroke:#854F0B;stroke-width:0.5;}.c-amber .fn{fill:#633806;}.c-amber .ds{fill:#854F0B;}
+ .c-red{fill:#FCEBEB;stroke:#A32D2D;stroke-width:0.5;}.c-red .fn{fill:#791F1F;}.c-red .ds{fill:#A32D2D;}
+</style>
+<rect x="0" y="0" width="900" height="600" fill="#fdfdfb"/>
+<text x="40" y="30" style="font-size:17px;font-weight:600;fill:#2c2c2a">Dev-os Goal Loop</text>
+<text x="40" y="50" style="font-size:11.5px;fill:#5f5e5a">单写者循环:现状对照终态 → gap 变任务 → 实现+对抗测试 → 跑绿不破基线 → 落档 → 刷 STATE → 自检 → 再来。诚实 + 防漂贯穿全程。</text>
+
+<rect class="box" x="40" y="64" width="820" height="120" rx="8"/>
+<text class="tg" x="50" y="82">每个新 session 怎么开始:读 4 个活跃小文件,拿 HANDOFF 当入口提示词</text>
+<g class="c-teal"><rect x="46" y="92" width="195" height="44" rx="4"/><text class="fn" x="54" y="109">GOAL.md</text><text class="ds" x="54" y="123">完整最终形态 · 终态契约</text><text class="ds" x="54" y="133" style="font-size:9px">所有 gap 对照它</text></g>
+<g class="c-teal"><rect x="249" y="92" width="195" height="44" rx="4"/><text class="fn" x="257" y="109">STATE.md</text><text class="ds" x="257" y="123">现状 vs GOAL · 每 loop 重生</text><text class="ds" x="257" y="133" style="font-size:9px">🟡 未验证 ≠ ✅ 已验证</text></g>
+<g class="c-teal"><rect x="452" y="92" width="195" height="44" rx="4"/><text class="fn" x="460" y="109">tasks/BOARD.md</text><text class="ds" x="460" y="123">下一步 · 活跃板</text><text class="ds" x="460" y="133" style="font-size:9px">gap 落成 T-xxx 行</text></g>
+<g class="c-gray"><rect x="655" y="92" width="195" height="44" rx="4"/><text class="fn" x="663" y="109">exec/HANDOFF.md</text><text class="ds" x="663" y="123">新 session 入口提示词</text><text class="ds" x="663" y="133" style="font-size:9px">重资料 read-on-demand</text></g>
+<text class="lbl" x="50" y="155">活跃面只 4 个小文件;重资料在 research/archive/,不默认加载。</text>
+<text class="lbl" x="50" y="174" style="fill:#791F1F">单写者:扩展不替换 · 不擅自 commit/push · 状态文件不假绿灯。</text>
+
+<rect class="box" x="40" y="194" width="820" height="158" rx="8"/>
+<text class="tg" x="50" y="212">Goal Loop:一段一收口的开发循环</text>
+<g class="c-teal"><rect x="46" y="222" width="150" height="48" rx="4"/><text class="fn" x="54" y="239">① 诚实查现状</text><text class="ds" x="54" y="253">重跑 gap 陈述器</text><text class="ds" x="54" y="265" style="font-size:9px">STATE: 现状 vs GOAL</text></g>
+<line x1="196" y1="246" x2="222" y2="246" stroke="#7a7873" stroke-width="1.4" marker-end="url(#ar)"/>
+<g class="c-teal"><rect x="226" y="222" width="150" height="48" rx="4"/><text class="fn" x="234" y="239">② gap 变任务</text><text class="ds" x="234" y="253">挑一条进 BOARD</text><text class="ds" x="234" y="265" style="font-size:9px">建 active/&lt;id&gt;/</text></g>
+<line x1="376" y1="246" x2="402" y2="246" stroke="#7a7873" stroke-width="1.4" marker-end="url(#ar)"/>
+<g class="c-teal"><rect x="406" y="222" width="158" height="48" rx="4"/><text class="fn" x="414" y="239">③ 执行 active/&lt;id&gt;</text><text class="ds" x="414" y="253">写实现 + 对抗测试</text><text class="ds" x="414" y="265" style="font-size:9px">种坏门必抓·扩展不替换</text></g>
+<line x1="564" y1="246" x2="590" y2="246" stroke="#7a7873" stroke-width="1.4" marker-end="url(#ar)"/>
+<g class="c-red"><rect x="594" y="222" width="150" height="48" rx="4"/><text class="fn" x="602" y="239">④ 测试跑绿</text><text class="ds" x="602" y="253">绿 · 不破基线</text><text class="ds" x="602" y="265" style="font-size:9px">门是纸做的 → FAIL</text></g>
+
+<g class="c-teal"><rect x="406" y="288" width="158" height="48" rx="4"/><text class="fn" x="414" y="305">⑤ 落档 done/</text><text class="ds" x="414" y="319">active → done/&lt;id&gt;/</text><text class="ds" x="414" y="331" style="font-size:9px">BOARD ✅ 刷新</text></g>
+<g class="c-teal"><rect x="226" y="288" width="150" height="48" rx="4"/><text class="fn" x="234" y="305">⑥ 刷 STATE</text><text class="ds" x="234" y="319">重生 gap 陈述</text><text class="ds" x="234" y="331" style="font-size:9px">🟡 ≠ ✅ 不假绿灯</text></g>
+<g class="c-gray"><rect x="46" y="288" width="150" height="48" rx="4"/><text class="fn" x="54" y="305">⑦ validate_dev</text><text class="ds" x="54" y="319">OS 结构自检</text><text class="ds" x="54" y="331" style="font-size:9px">退出码 0 / 1</text></g>
+
+<line x1="669" y1="270" x2="669" y2="296" stroke="#7a7873" stroke-width="1.4" marker-end="url(#ar)"/><path d="M594 312 H572" fill="none" stroke="#7a7873" stroke-width="1.4" marker-end="url(#ar)"/>
+<line x1="406" y1="312" x2="380" y2="312" stroke="#7a7873" stroke-width="1.4" marker-end="url(#ar)"/>
+<line x1="226" y1="312" x2="200" y2="312" stroke="#7a7873" stroke-width="1.4" marker-end="url(#ar)"/>
+<path d="M121 336 V346 H470 V338" fill="none" stroke="#7a7873" stroke-width="1.3" stroke-dasharray="4 3" marker-end="url(#ar)"/><text x="232" y="343" style="font-size:10px;fill:#7a7873">自检过 → 据新 STATE 取下一条 gap,再循环(一段一收口)</text>
+
+<rect class="box" x="40" y="362" width="500" height="158" rx="8"/>
+<text class="tg" x="50" y="380">研究台:ideas → active → findings → 任务(蒸馏入口)</text>
+<g class="c-amber"><rect x="46" y="390" width="142" height="34" rx="4"/><text class="fn" x="54" y="405">research/ideas/</text><text class="ds" x="54" y="418" style="font-size:9px">灵感·RFC·论文笔记</text></g>
+<line x1="188" y1="407" x2="210" y2="407" stroke="#7a7873" stroke-width="1.3" marker-end="url(#ar)"/>
+<g class="c-amber"><rect x="214" y="390" width="150" height="34" rx="4"/><text class="fn" x="222" y="405">research/active/</text><text class="ds" x="222" y="418" style="font-size:9px">在研深挖·informal</text></g>
+<line x1="364" y1="407" x2="386" y2="407" stroke="#7a7873" stroke-width="1.3" marker-end="url(#ar)"/>
+<g class="c-teal"><rect x="390" y="390" width="142" height="34" rx="4"/><text class="fn" x="398" y="405">findings/</text><text class="ds" x="398" y="418" style="font-size:9px">build-ready 设计</text></g>
+<line x1="461" y1="424" x2="461" y2="446" stroke="#7a7873" stroke-width="1.4" marker-end="url(#ar)"/>
+<g class="c-teal"><rect x="386" y="448" width="150" height="30" rx="4"/><text class="fn" x="394" y="467">tasks/BOARD T-xxx</text></g>
+<text class="lbl" x="50" y="440">蒸馏 6 步:先读怀疑面 → 抽承重可证伪主张 → 诚实标未验证残余</text>
+<text class="lbl" x="50" y="458"> → 落成 file:line + 复用模块的对抗测试设计 → 拆 BOARD 行 → TRACE 溯源</text>
+<text class="lbl" x="50" y="494">立成任务(开始建 + 对抗测试)才进 Goal Loop;在研阶段不要求</text>
+<text class="lbl" x="50" y="510">严格验收。原料归 research/archive/,拍板进 DECISIONS.md。</text>
+
+<rect class="box" x="552" y="362" width="308" height="158" rx="8"/>
+<text class="tg" x="562" y="380">validate_dev 自检(挂 CI / pre-commit)</text>
+<text class="ds" x="562" y="402" style="fill:#791F1F">· 四台文件齐全 · 目录齐全</text>
+<text class="ds" x="562" y="422" style="fill:#791F1F">· BOARD ✅done ↔ done/&lt;id&gt;/ 一一对应</text>
+<text class="ds" x="562" y="442" style="fill:#791F1F">· 项目锚点在(连带 validate_project)</text>
+<text class="ds" x="562" y="462" style="fill:#791F1F">· STATE 不假绿灯(🟡≠✅)</text>
+<text class="ds" x="562" y="482" style="fill:#444441">harness 不靠手工纪律,能自检 = 防漂。</text>
+<text class="ds" x="562" y="502" style="fill:#444441">退出码 1 即阻断,不让坏状态进 main。</text>
+
+<rect class="box" x="40" y="530" width="820" height="56" rx="8"/>
+<text class="tg" x="50" y="548">核心纪律(全文 RULES.md)贯穿每一步</text>
+<text class="ds" x="50" y="568" style="fill:#444441">· 诚实:🟡 声称 ≠ ✅ 验证  · 对抗测试:种一个已知的坏,门必须抓住,否则门是纸做的  · 防漂:易变的别写进慢变文件</text>
+<text class="ds" x="50" y="582" style="fill:#444441">· 审计先立框架(大→小→细,框架可被细节推翻)  · 扩展不替换  · 不擅自 commit/push  · 长引用文件靠导航头定位、必读原文</text>
+</svg>
