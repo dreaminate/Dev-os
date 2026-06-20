@@ -243,4 +243,4 @@ python dev/scripts/build_ledger.py   # 看全含量任务表
 Dev-os 是**单写者**的轻量基座。两个上位版本,需要时再升级:
 
 - **Multi-Dev-Os** — github.com/dreaminate/Multi-Dev-Os。**团队并发版**:多人同时开发一个项目时用。单一 STATE/BOARD/DECISIONS 换成 per-developer folder(`{type}/{developer_id}/...`),全局视图全脚本现生成,分配 / land 归 leader,任务卡走 uuid + DAG 依赖。**几个人同时撞同一批文件**时升级到它。
-- **Qf-dev-os** — github.com/dreaminate/Qf-dev-os。**严谨 / 风险门 / 无人值守超集**:在本 OS 之上加风险分级、高风险门禁工件(TSD/ADR/ReviewReceipt/TestEvidence)、harness 治理检查、过夜自动推进 runner。**改动会动真钱 / 不可逆 / 要长时间无人值守自治**时升级到它。
+- **Qf-dev-os** — github.com/dreaminate/Qf-dev-os。**严谨 / 风险门 / 无人值守超集**:在本 OS 之上加风险分级、高风险门禁工件(TSD/ADR/ReviewReceipt/TestEvidence)、harness 治理检查、过夜自动推进 runner。**需严谨验收 / 长时间无人值守自治 / 多并发 agent**时升级到它。
